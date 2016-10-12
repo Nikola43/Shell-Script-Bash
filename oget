@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$1" -z ]; then
+    echo "please, use: oget URL"
+else
+    if [ "$2" == "-r" ]; then 
+       usewithtor wget $1 --recursive -nH --cut-dirs=5 -nc 
+     else
+        usewithtor wget $1 --recursive -nH --cut-dirs=5 -nc
+    fi
+
+    if [ $? -eq 0 ]; then    
+        echo "File downloaded"
+    else
+        echo "ERROR!"
+    fi
+fi
