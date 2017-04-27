@@ -1,16 +1,15 @@
 #!/bin/bash
 
-#update system
-sudo apt update
-sudo apt dist-upgrade -y 
 
+#configure locales
 sudo echo "LC_ALL=es_ES.UTF-8" >> /etc/environment
 sudo echo "LANG=es_ES.UTF-8" >> /etc/environment
 sudo locale-gen "es_ES.UTF-8"
 sudo dpkg-reconfigure locales
 
-sudo apt update 
-sudo apt upgrade -y
+#update system
+sudo apt update
+sudo apt dist-upgrade -y 
 
 ## Install SQL Server
 # 1. Import the public repository GPG keys:
