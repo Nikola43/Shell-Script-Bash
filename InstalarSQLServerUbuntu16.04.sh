@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#update system
+sudo apt update
+sudo apt dist-upgrade -y 
+
 sudo echo "LC_ALL=es_ES.UTF-8" >> /etc/environment
 sudo echo "LANG=es_ES.UTF-8" >> /etc/environment
 sudo locale-gen "es_ES.UTF-8"
